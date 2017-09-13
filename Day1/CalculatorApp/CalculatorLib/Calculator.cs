@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace CalculatorLib
+﻿namespace CalculatorLib
 {
     public class Calculator
     {
-        public int Add(int a, int b) => a + b;
-       
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace CalculatorLib.MsTest
     public class CalculatorTests
     {
         [TestMethod]
-        public void AddTest()
+        public void Add_returns_summation_of_numbers()
         {
             var calculator = new Calculator();
             var result = calculator.Add(10, 20);
