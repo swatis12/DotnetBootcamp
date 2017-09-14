@@ -1,0 +1,55 @@
+﻿<h2>Stock List</h2>
+<span></span>
+<br/>
+
+<div id="divStocks">
+
+    <table style="border: 3px solid; height: 400px; width: 500px">
+        <tr style="height: 20%; width: 100%">
+            <td style="width: 5px"></td>
+            <td>
+                <b>STOCK NAME </b>
+            </td>
+            <td style="width: 5px"></td>
+            <td>
+                <b>PRICE </b>
+            </td>
+            <td style="width: 5px"></td>
+            <td>
+                <b>LAST PRICE</b>
+            </td>
+        </tr>
+
+        @foreach (var stock in Model)
+        {
+            <tr style="height: 20%; width: 100%">
+                <td style="width: 5px"></td>
+
+                <td>
+                    @stock.Name
+                </td>
+                <td style="width: 5px"></td>
+                <td>
+                    @stock.Price
+
+                </td>
+                <td style="width: 5px"></td>
+                <td>
+                    @stock.LastPrice
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+<script language="javascript" type="text/javascript">
+
+    function getStockUpdates() {
+
+        $("#divStocks").load('/stock/GetAllStocks');
+
+    }
+
+</script>
