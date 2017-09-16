@@ -1,4 +1,6 @@
-﻿namespace CalculatorLib
+﻿using System;
+
+namespace CalculatorLib
 {
     public class Calculator
     {
@@ -9,7 +11,7 @@
 
         public int Substract(int a, int b)
         {
-            return a - b;
+            throw new ArgumentException();
         }
     }
 }
